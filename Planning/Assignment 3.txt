@@ -1,4 +1,3 @@
-Login -> DB
 User -> Login -> Webpage.
 Admin -> Login -> Webpage or AdminPage.
 Teacher -> Login -> Webpage or TeacherPage.
