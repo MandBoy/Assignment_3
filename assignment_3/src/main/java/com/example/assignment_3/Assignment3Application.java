@@ -1,4 +1,4 @@
-package com.example.assignment_3;
+package java.com.example.assignment_3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,5 +8,4 @@ public class Assignment3Application {
     public static void main(String[] args) {
         SpringApplication.run(Assignment3Application.class, args);
     }
-
 }
