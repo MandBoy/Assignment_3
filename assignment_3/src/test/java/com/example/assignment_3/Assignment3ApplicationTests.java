@@ -1,10 +1,10 @@
-package assignement.codeproject;
+package com.example.assignment_3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CodeprojectApplicationTests {
+class Assignment3ApplicationTests {
 
     @Test
     void contextLoads() {

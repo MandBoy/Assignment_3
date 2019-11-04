@@ -1,13 +1,13 @@
-package assignement.codeproject;
+package com.example.assignment_3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CodeprojectApplication {
+public class Assignment3Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(CodeprojectApplication.class, args);
+        SpringApplication.run(Assignment3Application.class, args);
     }
 
 }
