@@ -1,4 +1,5 @@
 package Repositories;
 
-public class AdminRepo {
+public class AdminRepo{
+
 }
