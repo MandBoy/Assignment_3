@@ -1,5 +1,4 @@
 package Repositories;
 
-public class AdminRepo{
-
+public class TableRepo {
 }
