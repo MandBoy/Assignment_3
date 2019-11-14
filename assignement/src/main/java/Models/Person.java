@@ -11,7 +11,7 @@ public class Person{
     private Login login;
 
     public Person(){}
-    public Person(int id, String name){
+    public Person(int id, String name, Login login){
         this.id = id;
         this.name = name;
         this.login = login;
