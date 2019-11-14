@@ -41,5 +41,4 @@ public class PersonRepo {
         String sql = "DELETE FROM Person WHERE id=?";
         template.update(sql, id);
     }
-
 }
