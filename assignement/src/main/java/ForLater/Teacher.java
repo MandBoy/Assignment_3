@@ -1,7 +1,6 @@
-package Models;
+package ForLater;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 public class Teacher extends Person{
@@ -11,6 +10,7 @@ public class Teacher extends Person{
     public Teacher(String email){
         this.email = email;
     }
+
     public String getEmail() {
         return email;
     }

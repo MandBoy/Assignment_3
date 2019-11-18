@@ -1,4 +1,6 @@
-package Models;
+package ForLater;
+
+import Models.Login;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

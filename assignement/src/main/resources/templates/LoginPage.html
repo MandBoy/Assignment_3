@@ -7,10 +7,27 @@
 <body>
 
 <h1>--- Login Page ---</h1>
-<input type="text" username="username" class="form-control" placeholder="Write your username">
-<br>
-<input type="text" password="password" class="form-control" placeholder="Write your password">
-<br>
+<form action="/MainPage" method="post">
+    Username: <input type="username" username="username" placeholder="Write your username">
+    <br>
+    Password: <input type="password" placeholder="Write your password" id="myInput">
+    <br><br>
+    Show Password: <input type="checkbox" onclick="myFunction()">
+    <br>
+    Submit login: <input type="submit" value="Submit">
+    <br>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+    <br>
 
+</form>
 </body>
 </html>

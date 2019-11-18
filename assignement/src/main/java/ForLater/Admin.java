@@ -1,4 +1,4 @@
-package Models;
+package ForLater;
 
 import javax.persistence.Entity;
 

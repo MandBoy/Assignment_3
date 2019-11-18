@@ -1,9 +1,12 @@
 package Models;
 
+import ForLater.Person;
+
 import javax.persistence.Entity;
 
 @Entity
-public class Login{
+public class Login extends Person {
+    private int id;
     private String username;
     private String password;
 

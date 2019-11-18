@@ -7,17 +7,31 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class homeController {
+public class homeController{
     @Autowired
-    CRUDServices projectServices;
-
-    @GetMapping("/Login")
+    @GetMapping("")
     public String loginPage(){
         return "LoginPage";
     }
+
     @PostMapping
     public String login(String username, String password){
-        LoginService.checkLogin(username, password);
-        return "redirect:/mainPage";
+        boolean exists = LoginService.checkLogin(username, password);
+        if(exists){
+            return "redirect:/MainPage";
+        }
+        else{
+            System.out.println("Error: Wrong username or password.");
+        }
+        return "redirect:/LoginPage";
+    }
+
+    @GetMapping("/MainPage")
+    public String mainPage(){
+        return "MainPage";
+    }
+    @PostMapping("/MainPage")
+    public String mainPageDirect(){
+        return "redirect:/MainPage";
     }
 }
