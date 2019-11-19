@@ -1,6 +1,4 @@
-package ForLater;
-
-import Models.Login;
+package Models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,6 +16,11 @@ public class Person{
         this.name = name;
         this.login = login;
     }
+    public Person(){
+        this.id = id;
+        this.name = setName();
+    }
+
     public int getId() {
         return id;
     }

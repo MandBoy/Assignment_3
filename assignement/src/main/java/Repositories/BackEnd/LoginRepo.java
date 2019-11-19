@@ -1,4 +1,4 @@
-package Repositories;
+package Repositories.BackEnd;
 
 import Models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
@@ -37,11 +36,4 @@ public class LoginRepo{
         String sql = "DELETE FROM Login WHERE id=?";
         template.update(sql, id);
     }
-
-    public boolean checkLogin(String username, String password){
-        String sql = "SELECT * FROM Login";
-        RowMapper<Login> rowMapper = new BeanPropertyRowMapper<>(Login.class);
-        return template.query(sql,rowMapper,username,password);
-    }
-
 }

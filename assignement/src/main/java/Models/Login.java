@@ -1,7 +1,5 @@
 package Models;
 
-import ForLater.Person;
-
 import javax.persistence.Entity;
 
 @Entity
