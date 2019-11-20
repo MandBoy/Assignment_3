@@ -1,4 +1,4 @@
-package Repositories.BackEnd;
+package Repositories;
 
 import Models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class LoginRepo{
         template.queryForObject(sql, rowMapper, id);
     }
     public void createLogin(Login login){
-        String sql = "INSERT INTO Login(name, login) VALUES(?, ?";
+        String sql = "INSERT INTO Login(name, login) VALUES(?, ?)";
         RowMapper<Login> rowMapper = new BeanPropertyRowMapper<>(Login.class);
         template.update(sql, rowMapper, login.getUsername(), login.getPassword());
     }
@@ -36,4 +36,11 @@ public class LoginRepo{
         String sql = "DELETE FROM Login WHERE id=?";
         template.update(sql, id);
     }
+    public void checkLogin(String username, String password){
+        String sql = "SELECT Username FROM Login";
+        RowMapper<Login> rowMapper = new BeanPropertyRowMapper<>(Login.class);
+        template.query(sql,rowMapper);
+    }
+
+
 }

@@ -3,21 +3,33 @@ package Models;
 import javax.persistence.Entity;
 
 @Entity
-public class Login extends Person {
+public class Login{
     private int id;
-    private String username;
+    private static String username;
     private String password;
 
-    public void setUsername(){
+    public Login(int id, String username, String password){
+        this.id = id;
         this.username = username;
-    }
-    public void setPassword(){
         this.password = password;
     }
-    public String getUsername(){
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public static String getUsername() {
         return username;
     }
-    public String getPassword(){
+    public static void setUsername(String username) {
+        Login.username = username;
+    }
+    public String getPassword() {
         return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

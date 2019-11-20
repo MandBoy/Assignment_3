@@ -12,7 +12,20 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignement/src/main/java/com/example/assignement/AssignmentApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +43,7 @@
         <option value="$PROJECT_DIR$/assignment_3/src/main/java/com/example/assignment_3/Assignment3Application.java" />
         <option value="$PROJECT_DIR$/assignment_3/src/test/java/com/example/assignment_3/SpringBootTest.java" />
         <option value="$PROJECT_DIR$/assignment_3/src/test/java/com/example/assignment_3/Assignment3ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/assignement/src/main/java/com/example/assignement/AssignmentApplication.java" />
       </list>
     </option>
   </component>
@@ -233,16 +247,18 @@
       <workItem from="1573463108802" duration="18000" />
       <workItem from="1574071838624" duration="24000" />
       <workItem from="1574089959914" duration="19000" />
+      <workItem from="1574254576290" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323000" />
+    <option name="totallyTimeSpent" value="344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26074973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -279,6 +295,16 @@
     <entry file="file://$PROJECT_DIR$/assignment_3/src/test/java/com/example/assignment_3/SpringBootTest.java" />
     <entry file="file://$PROJECT_DIR$/assignment_3/src/test/java/com/example/assignment_3/Assignment3ApplicationTests.java" />
     <entry file="file://$PROJECT_DIR$/assignment_3/src/main/java/com/example/assignment_3/Assignment3Application.java" />
+    <entry file="file://$PROJECT_DIR$/assignement/src/main/java/com/example/assignement/AssignmentApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

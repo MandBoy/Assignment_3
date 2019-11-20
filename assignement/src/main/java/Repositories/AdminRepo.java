@@ -1,4 +1,4 @@
-package Repositories.BackEnd;
+package Repositories;
 
 import Models.Admin;
 import org.springframework.beans.factory.annotation.Autowired;

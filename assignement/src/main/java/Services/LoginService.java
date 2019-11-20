@@ -1,6 +1,6 @@
 package Services;
 
-import Repositories.BackEnd.LoginRepo;
+import Repositories.LoginRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
