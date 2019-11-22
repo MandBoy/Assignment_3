@@ -41,6 +41,4 @@ public class LoginRepo{
         RowMapper<Login> rowMapper = new BeanPropertyRowMapper<>(Login.class);
         template.query(sql,rowMapper);
     }
-
-
 }

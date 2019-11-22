@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import java.util.LinkedList;
 
 @Entity
-public class Class{
+public class Klasse{
     private int id;
     private String name;
     private Teacher teacher;
@@ -14,7 +14,7 @@ public class Class{
     private int maxStudents;
     private LinkedList<Student> students;
 
-    public Class(int id, String name, Teacher teacher, String description, String requirements, int minStudents, int maxStudents, LinkedList<Student> students){
+    public Klasse(int id, String name, Teacher teacher, String description, String requirements, int minStudents, int maxStudents, LinkedList<Student> students){
         this.id = id;
         this.name = name;
         this.teacher = teacher;
@@ -23,7 +23,6 @@ public class Class{
         this.minStudents = minStudents;
         this.maxStudents = maxStudents;
         this.students = students;
-
     }
 
     public int getId() {

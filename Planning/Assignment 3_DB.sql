@@ -1,9 +1,9 @@
 CREATE TABLE Student(
 	Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name char(255) NOT NULL,
-    /*Login Referance*/
+    /*Login*/
     Semester int NOT NULL
-    /*Classes person is in*/
+    /*List of Classes student is in*/
 );
 CREATE TABLE Admin(
 	Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -13,15 +13,15 @@ CREATE TABLE Admin(
 CREATE TABLE Teacher(
 	Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name char(255) NOT NULL
-    /*Login*/
-    /*Classes teacher is in*/
+    /*Login referance*/
+    /*List of Classes teacher is in*/
 );
 CREATE TABLE Class(
 	Id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name char(255) NOT NULL,
-    /*Teacher referance*/
+    /*Teacher of class referance*/
     Description char(255) NOT NULL,
-	/*Referance to studen semester*/
+	/*Requirement referance to student semester*/
     MinStudents int NOT NULL,
     MaxStudents int NOT NULL
     /*List of students in class*/
