@@ -4,22 +4,14 @@ import javax.persistence.Entity;
 
 @Entity
 public class Login{
-    private int id;
     private static String username;
     private String password;
 
-    public Login(int id, String username, String password){
-        this.id = id;
+    public Login(String username, String password){
         this.username = username;
         this.password = password;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
     public static String getUsername() {
         return username;
     }
