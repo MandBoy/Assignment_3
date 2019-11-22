@@ -9,15 +9,21 @@
 
 <body>
 <h1>--- Login Page ---</h1>
-<form action="/MainPage" method="post">
+<!-- Form Action should go to loginCheck and user should then be redirected accordingly -->
+<form action="/CheckLogin" method="post">
+    <!-- Username of user which have to point to an primary key of a user -->
     Username: <input type="username" username="username" placeholder="Write your username">
     <br>
+    <!-- Self explanatory -->
     Password: <input type="password" password="password" placeholder="Write your password" id="myInput">
     <br><br>
+    <!-- Box with function to see once password or not -->
     Show Password: <input type="checkbox" onclick="myFunction()">
     <br>
+    <!-- Button which has to submit username and password to login check function -->
     Submit login: <input type="submit" value="Submit">
     <br>
+    <!-- Function to hide password -->
     <script>
         function myFunction() {
             var x = document.getElementById("myInput");

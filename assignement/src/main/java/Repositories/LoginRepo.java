@@ -36,9 +36,14 @@ public class LoginRepo{
         String sql = "DELETE FROM Login WHERE id=?";
         template.update(sql, id);
     }
-    public void checkLogin(String username, String password){
+    //Should go into db and look for persons username.
+    //If Username and password is on same line in DB.
+    //Function should return a number which tells or Service which rank the person is and which page he should get.
+    public int checkLogin(String username, String password){
         String sql = "SELECT Username FROM Login";
         RowMapper<Login> rowMapper = new BeanPropertyRowMapper<>(Login.class);
         template.query(sql,rowMapper);
+        int rank = 0;
+        return rank;
     }
 }

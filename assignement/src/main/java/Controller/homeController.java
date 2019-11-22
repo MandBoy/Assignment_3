@@ -8,21 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class homeController{
     @GetMapping("/")
     public String LoginPage(){
-        return "LoginPage.html";
+        return "LoginPage";
     }
-
-    @PostMapping("/")
-
-
-
-    @GetMapping("/MainPage")
-    public String mainPage(){
-        return "MainPage";
-    }
-    @PostMapping("/MainPage")
-    public String getMainPage(){
-        return "redirect:/MainPage";
-    }
+    //Login Username and Password should go
 
     @GetMapping("/TeacherPage")
     public String teacherPage(){
