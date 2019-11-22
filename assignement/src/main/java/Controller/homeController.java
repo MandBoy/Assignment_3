@@ -12,7 +12,6 @@ public class homeController{
     public String LoginPage(){
         return "LoginPage.html";
     }
-
     @PostMapping("")
     public String getLoginPage(){
         return "redirect:/LoginPage";
@@ -22,10 +21,27 @@ public class homeController{
     public String mainPage(){
         return "MainPage";
     }
-
     @PostMapping("/MainPage")
     public String getMainPage(){
-        return "MainPage";
+        return "redirect:/MainPage";
+    }
+
+    @GetMapping("/TeacherPage")
+    public String teacherPage(){
+        return "TeacherPage";
+    }
+    @PostMapping("/TeacherPage")
+    public String getTeacherPage(){
+        return "redirect:/TeacherPage";
+    }
+
+    @GetMapping("/AdminPage")
+    public String adminPage(){
+        return "AdminPage";
+    }
+    @PostMapping("/AdminPage")
+    public String getAdminPage(){
+        return "redirect:/AdminPage";
     }
 
     /*
