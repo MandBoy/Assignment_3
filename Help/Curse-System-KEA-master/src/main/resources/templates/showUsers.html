@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments :: head">
+<body>
+<div th:replace="fragments :: navAdmin"></div>
+<div class="container">
+    <h1>
+        List over all users
+    </h1>
+
+    <p>
+    <a href="/adminlogin">Back</a>
+    </p>
+
+    <p>
+    <a href="/createUser" class="btn btn-info">
+        <span class="glyphicon glyphicon-cutlery"></span> Add user!
+    </a>
+    </p>
+<div>
+    <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td><a th:href="@{'/updateUser/'+${user.id}}">Edit</a></td>
+            <td><a th:href="@{'/deleteUser/'+${user.id}}" class="text-danger">Delete</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+</html>

@@ -6,16 +6,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class homeController{
-
-
     @GetMapping("/")
     public String LoginPage(){
         return "LoginPage.html";
     }
-    @PostMapping("")
-    public String getLoginPage(){
-        return "redirect:/LoginPage";
-    }
+
+    @PostMapping("/")
+
+
 
     @GetMapping("/MainPage")
     public String mainPage(){

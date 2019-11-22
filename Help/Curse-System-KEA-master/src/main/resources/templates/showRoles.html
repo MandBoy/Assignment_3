@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments :: head">
+<body>
+<div th:replace="fragments :: navAdmin"></div>
+<div class="container">
+<h1>
+    List over all user roles
+</h1>
+
+<p>
+    <a href="/adminlogin">Back</a>
+</p>
+
+<p>
+    <a href="/createRole" class="btn btn-info">
+        <span class="glyphicon glyphicon-cutlery"></span> Add role!
+    </a>
+</p>
+<div>
+    <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>
+                Role_Id
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Auth Group
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="role : ${roles}">
+            <td th:text="${role.id}"></td>
+            <td th:text="${role.username}"></td>
+            <td th:text="${role.groupAuth}"></td>
+            <td><a th:href="@{'/updateRole/'+${role.id}}">Edit</a></td>
+            <td><a th:href="@{'/deleteRole/'+${role.id}}" class="text-danger">Delete</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments :: head">
+
+
+<body>
+<div th:replace="fragments :: navTeacher"></div>
+<div class="container">
+<h1>
+    Liste over alle lærer
+</h1>
+
+
+
+
+<div>
+    <table class="table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Opdatere</th>
+            <th>Slet</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr> </tr>
+        <p th:each="teacher : ${teachers}">
+        <td> <span th:text="${teacher.email}">Produkt</span> </td>
+        <td><span th:text="${teacher.first_name}">Pris</span></td>
+        <td><span th:text="${teacher.last_name}">description</span></td>
+        <td><a th:href="@{'/updateTeachers/' + ${teacher.email}}">Tryk her</a></td>
+        <td><a class="text-danger" th:href="@{'/delete/' + ${teacher.email}}">Tryk her</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<a href="/createTeacher" class="btn btn-info">
+    <span class="glyphicon glyphicon-cutlery"></span> Add Teacher!
+</a>
+</div>
+</body>
+</html>
