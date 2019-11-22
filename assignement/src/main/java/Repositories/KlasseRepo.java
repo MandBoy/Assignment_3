@@ -8,21 +8,22 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 
+/*
 public class KlasseRepo{
     @Autowired
     JdbcTemplate template;
 
-    public List<Class> fetchAllClass(){
-        String sql = " SELECT * FROM  Class";
+    public List<Class> fetchAllKlasse(){
+        String sql = " SELECT * FROM  Klasse";
         RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
         return template.query(sql, rowMapper);
     }
-    public void readAClassById(int id){
+    public void readAKlasseById(int id){
         String sql = "SELECT * FROM Class WHERE id=?";
         RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
         template.queryForObject(sql, rowMapper, id);
     }
-    public void createClass(Class class){
+    public void createClass(Klasse klasse){
         String sql = "INSERT INTO Class(name,teacher,description,requirements,minStudents,maxStudents,students) VALUES(?,?,?,?,?,?,?,?)";
         RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
         template.update(sql, rowMapper, class.getName(), admin.getLogin());
@@ -36,3 +37,4 @@ public class KlasseRepo{
         template.update(sql, id);
     }
 }
+*/

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
 @Service
 public class AdminService{
     @Autowired
@@ -28,4 +29,4 @@ public class AdminService{
         return adminRepo.readById(adminId);
     }
 }
-
+*/
