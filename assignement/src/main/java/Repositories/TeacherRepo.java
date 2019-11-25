@@ -17,13 +17,13 @@ public class TeacherRepo{
     String sql;
     RowMapper<Teacher> rowMapper = new BeanPropertyRowMapper<>(Teacher.class);
 
-    public List<Teacher>featchAllTeacher(){
+    public List<Teacher> featchAllTeacher(){
         sql = "SELECT * FROM Teacher";
         return template.query(sql,rowMapper);
     }
-    public void ReadTeacherById(int id){
+    public Teacher readTeacherById(int id){
         sql = "SELECT * FROM Teacher WHERE id=?";
-        template.queryForObject(sql, rowMapper, id);
+        return template.queryForObject(sql, rowMapper, id);
     }
     public void createTeacher(Teacher teacher){
         sql = "INSERT INTO Teacher(name, email, login) VALUES (?,?,?)";
@@ -37,8 +37,4 @@ public class TeacherRepo{
         sql = "DELETE FROM Teacher WHERE Id=?";
         template.update(sql,id);
     }
-
-
-
-
 }

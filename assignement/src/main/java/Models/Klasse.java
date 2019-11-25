@@ -1,5 +1,7 @@
 package Models;
 
+import net.bytebuddy.dynamic.scaffold.MethodGraph;
+
 import javax.persistence.Entity;
 import java.util.LinkedList;
 
@@ -7,17 +9,17 @@ import java.util.LinkedList;
 public class Klasse{
     private int id;
     private String name;
-    private Teacher teacher;
+    private LinkedList<Teacher> teachers;
     private String description;
     private String requirements;
     private int minStudents;
     private int maxStudents;
     private LinkedList<Student> students;
 
-    public Klasse(int id, String name, Teacher teacher, String description, String requirements, int minStudents, int maxStudents, LinkedList<Student> students){
+    public Klasse(int id, String name, LinkedList<Teacher> teachers, String description, String requirements, int minStudents, int maxStudents, LinkedList<Student> students){
         this.id = id;
         this.name = name;
-        this.teacher = teacher;
+        this.teachers = teachers;
         this.description = description;
         this.requirements = requirements;
         this.minStudents = minStudents;
@@ -37,11 +39,11 @@ public class Klasse{
     public void setName(String name) {
         this.name = name;
     }
-    public Teacher getTeacher() {
-        return teacher;
+    public LinkedList getTeacher() {
+        return teachers;
     }
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public void setTeacher(LinkedList<Teacher> teachers) {
+        this.teachers = teachers;
     }
     public String getDescription() {
         return description;

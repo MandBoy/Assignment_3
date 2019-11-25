@@ -16,10 +16,10 @@ public class KlasseRepo{
     RowMapper<Klasse> rowMapper = new BeanPropertyRowMapper<>(Klasse.class);
 
     public List<Klasse> fetchAllKlasse(){
-        String sql = " SELECT * FROM  Klasse";
+        String sql = " SELECT * FROM Klasse";
         return template.query(sql, rowMapper);
     }
-    public void readAKlasseById(int id){
+    public void readKlasseById(int id){
         String sql = "SELECT * FROM Class WHERE id=?";
         template.queryForObject(sql, rowMapper, id);
     }

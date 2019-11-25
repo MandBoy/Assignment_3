@@ -14,9 +14,9 @@ public class StudentRepo {
 
     @Autowired
     JdbcTemplate template;
+
     String sql;
     RowMapper<Student> rowMapper = new BeanPropertyRowMapper<>(Student.class);
-
 
     public List<Student> fetchAllStudents(){
         sql = "SELECT * FROM  Student";
