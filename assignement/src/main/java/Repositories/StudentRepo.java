@@ -23,19 +23,19 @@ public class StudentRepo {
         return template.query(sql, rowMapper);
     }
 
-    public void readStudentById(int id){
+    public Student readStudentById(int id){
         sql = "SELECT * FROM Student WHERE id=?";
-        template.queryForObject(sql, rowMapper, id);
+        return template.queryForObject(sql, rowMapper, id);
     }
 
-    public void createStudent(Student Student){
+    public void createStudent(Student student){
         sql = "INSERT INTO Student(name, email, semester, login) VALUES(?, ?, ?, ?)";
-        template.update(sql, rowMapper, Student.getId(), Student.getName(), Student.getSemester(), Student.getLogin());
+        template.update(sql, rowMapper, student.getId(), student.getName(), student.getSemester(), student.getLogin());
     }
 
-    public void updateStudent(Student Student){
+    public void updateStudent(Student student){
         sql = "UPDATE Student SET name=?, SET email=?, SET login=? ";
-        template.update(sql, Student.getId(), Student.getName(), Student.getSemester(), Student.getLogin());
+        template.update(sql, student.getId(), student.getName(), student.getSemester(), student.getLogin());
     }
 
     public void deleteStudent(int id){
