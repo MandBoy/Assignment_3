@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,8 +8,18 @@
 <body>
 <h1>--- Admin Page ---</h1>
 <!-- Button to go to Create Page-->
+<div>
+<form action = "/Create" method="post"></form>
+<button type="submit"> Create </button>
 <!-- Button to go to Read Page-->
+<form action = "/Read" method="post"></form>
+<button type = "submit"> Read </button>
 <!-- Button to go to Update Page-->
+<form action = "/Update" method="post"></form>
+<button type = "submit"> Update</button>
 <!-- Button to go to Delete Page-->
+<form action = "/Delete" method="post"></form>
+<button type = "submit"> Delete</button>
+</div>
 </body>
 </html>

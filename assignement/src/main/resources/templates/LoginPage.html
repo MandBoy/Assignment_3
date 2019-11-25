@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +8,7 @@
 <body>
 <h1>--- Login Page ---</h1>
 <!-- Form Action should go to loginCheck and user should then be redirected accordingly -->
-<form action="/CheckLogin" method="post">
+<form action="GetPage" method="get">
     <!-- Username of user which have to point to an primary key of a user -->
     Username: <input type="username" username="username" placeholder="Write your username">
     <br>
@@ -21,7 +19,7 @@
     Show Password: <input type="checkbox" onclick="myFunction()">
     <br>
     <!-- Button which has to submit username and password to login check function -->
-    Submit login: <input type="submit" value="Submit">
+    Submit login: <input type="submit" value="Submit" onclick="loginCheck()">
     <br>
     <!-- Function to hide password -->
     <script>
@@ -34,7 +32,6 @@
             }
         }
     </script>
-    <br>
 </form>
 </body>
 </html>

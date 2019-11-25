@@ -1,6 +1,6 @@
 package Repositories;
 
-import Models.Admin;
+import Models.Klasse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,33 +8,33 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 
-/*
 public class KlasseRepo{
     @Autowired
     JdbcTemplate template;
 
-    public List<Class> fetchAllKlasse(){
+    String sql;
+    RowMapper<Klasse> rowMapper = new BeanPropertyRowMapper<>(Klasse.class);
+
+    public List<Klasse> fetchAllKlasse(){
         String sql = " SELECT * FROM  Klasse";
-        RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
         return template.query(sql, rowMapper);
     }
     public void readAKlasseById(int id){
         String sql = "SELECT * FROM Class WHERE id=?";
-        RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
         template.queryForObject(sql, rowMapper, id);
     }
     public void createClass(Klasse klasse){
-        String sql = "INSERT INTO Class(name,teacher,description,requirements,minStudents,maxStudents,students) VALUES(?,?,?,?,?,?,?,?)";
-        RowMapper<Class> rowMapper = new BeanPropertyRowMapper<>(Class.class);
-        template.update(sql, rowMapper, class.getName(), admin.getLogin());
+        sql = "INSERT INTO Klasse(name,teacher,description,requirements,minStudents,maxStudents,students) VALUES()";
+        template.update(sql, rowMapper,klasse.getName(),klasse.getTeacher(),klasse.getDescription(),klasse.getRequirements(),klasse.getMinStudents(),klasse.getMaxStudents(),klasse.getStudents());
     }
-    public void updateAdmin(Admin admin){
-        String sql = "UPDATE Admin SET name=?, login=?";
-        template.update(sql, admin.getName(), admin.getLogin());
+    public void updateKlasse(Klasse klasse){
+        sql = "UPDATE Klasse SET name=?, Klasse=?";
+        template.update(sql, klasse.getName(),klasse.getTeacher(),klasse.getDescription(),klasse.getRequirements(),klasse.getMinStudents(),klasse.getMaxStudents(),klasse.getStudents());
     }
-    public void deleteAdmin(int id){
-        String sql = "DELETE FROM Admin WHERE id=?";
+    public void deleteKlasse(int id){
+        String sql = "DELETE FROM Klasse WHERE id=?";
         template.update(sql, id);
     }
 }
-*/
+
+
