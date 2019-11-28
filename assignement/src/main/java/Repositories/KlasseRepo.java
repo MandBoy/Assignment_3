@@ -16,15 +16,15 @@ public class KlasseRepo{
     RowMapper<Klasse> rowMapper = new BeanPropertyRowMapper<>(Klasse.class);
 
     public List<Klasse> fetchAllKlasse(){
-        String sql = " SELECT * FROM Klasse";
+        sql = " SELECT * FROM Klasse";
         return template.query(sql, rowMapper);
     }
-    public void readKlasseById(int id){
-        String sql = "SELECT * FROM Class WHERE id=?";
-        template.queryForObject(sql, rowMapper, id);
+    public Klasse readKlasseById(int id){
+        sql = "SELECT * FROM Class WHERE id=?";
+        return template.queryForObject(sql, rowMapper, id);
     }
     public void createClass(Klasse klasse){
-        sql = "INSERT INTO Klasse(name,teacher,description,requirements,minStudents,maxStudents,students) VALUES()";
+        sql = "INSERT INTO Klasse(name,teacher,description,requirements,minStudents,maxStudents,students) VALUES(?,?,?,?,?,?,?)";
         template.update(sql, rowMapper,klasse.getName(),klasse.getTeacher(),klasse.getDescription(),klasse.getRequirements(),klasse.getMinStudents(),klasse.getMaxStudents(),klasse.getStudents());
     }
     public void updateKlasse(Klasse klasse){

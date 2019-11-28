@@ -1,6 +1,7 @@
 package Models;
 
 import javax.persistence.Entity;
+import java.util.LinkedList;
 
 @Entity
 public class Teacher{
@@ -8,13 +9,15 @@ public class Teacher{
     private String name;
     private String email;
     private Login login;
+    private LinkedList<Klasse> klasser;
 
     public Teacher(){}
-    public Teacher(int id, String name, String email, Login login){
+    public Teacher(int id, String name, String email, Login login, LinkedList<Klasse> klasser){
         this.id = id;
         this.name = name;
         this.email = email;
         this.login = login;
+        this.klasser = klasser;
     }
 
     public int getId() {
@@ -40,5 +43,11 @@ public class Teacher{
     }
     public void setLogin(Login login) {
         this.login = login;
+    }
+    public LinkedList<Klasse> getKlasser() {
+        return klasser;
+    }
+    public void setKlasser(LinkedList<Klasse> klasser) {
+        this.klasser = klasser;
     }
 }

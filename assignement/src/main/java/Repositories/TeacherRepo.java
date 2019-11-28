@@ -26,12 +26,12 @@ public class TeacherRepo{
         return template.queryForObject(sql, rowMapper, id);
     }
     public void createTeacher(Teacher teacher){
-        sql = "INSERT INTO Teacher(name, email, login) VALUES (?,?,?)";
-        template.update(sql,rowMapper,teacher.getName(),teacher.getEmail(),teacher.getLogin());
+        sql = "INSERT INTO Teacher(name, email, login, klasser) VALUES (?,?,?,?)";
+        template.update(sql,rowMapper,teacher.getName(),teacher.getEmail(),teacher.getLogin(), teacher.getKlasser());
     }
     public void updateTeacher(Teacher teacher){
         sql = "UPDATE Teacher SET name=?, Teacher=?";
-        template.update(sql,teacher.getName(),teacher.getEmail(),teacher.getLogin());
+        template.update(sql,teacher.getName(),teacher.getEmail(),teacher.getLogin(), teacher.getKlasser());
     }
     public void deleteTeacher(int id){
         sql = "DELETE FROM Teacher WHERE Id=?";

@@ -1,7 +1,5 @@
 package Models;
 
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
-
 import javax.persistence.Entity;
 import java.util.LinkedList;
 

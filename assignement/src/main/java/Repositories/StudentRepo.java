@@ -11,7 +11,6 @@ import java.util.List;
 
 @Repository
 public class StudentRepo {
-
     @Autowired
     JdbcTemplate template;
 
@@ -22,22 +21,18 @@ public class StudentRepo {
         sql = "SELECT * FROM  Student";
         return template.query(sql, rowMapper);
     }
-
     public Student readStudentById(int id){
         sql = "SELECT * FROM Student WHERE id=?";
         return template.queryForObject(sql, rowMapper, id);
     }
-
     public void createStudent(Student student){
-        sql = "INSERT INTO Student(name, email, semester, login) VALUES(?, ?, ?, ?)";
-        template.update(sql, rowMapper, student.getId(), student.getName(), student.getSemester(), student.getLogin());
+        sql = "INSERT INTO Student(name, email, semester, login) VALUES(?, ?, ?, ?, ?)";
+        template.update(sql, rowMapper, student.getId(), student.getName(), student.getSemester(), student.getLogin(),student.getKlasser());
     }
-
     public void updateStudent(Student student){
-        sql = "UPDATE Student SET name=?, SET email=?, SET login=? ";
-        template.update(sql, student.getId(), student.getName(), student.getSemester(), student.getLogin());
+        sql = "UPDATE Student SET name=?, SET email=?, SET login=?, SET klasser=?";
+        template.update(sql, student.getId(), student.getName(), student.getSemester(), student.getLogin(), student.getKlasser());
     }
-
     public void deleteStudent(int id){
         sql = "DELETE FROM Student WHERE id=?";
         template.update(sql, id);

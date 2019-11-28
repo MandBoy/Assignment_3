@@ -14,27 +14,27 @@ public class AdminRepo{
     @Autowired
     JdbcTemplate template;
 
+    String sql;
+    RowMapper<Admin> rowMapper = new BeanPropertyRowMapper<>(Admin.class);
+
     public List<Admin> fetchAllAdmin(){
-        String sql = " SELECT * FROM  Admin";
-        RowMapper<Admin> rowMapper = new BeanPropertyRowMapper<>(Admin.class);
+        sql = " SELECT * FROM  Admin";
         return template.query(sql, rowMapper);
     }
-    public void readAdminById(int id){
-        String sql = "SELECT * FROM Admin WHERE id=?";
-        RowMapper<Admin> rowMapper = new BeanPropertyRowMapper<>(Admin.class);
-        template.queryForObject(sql, rowMapper, id);
+    public Admin readAdminById(int id){
+        sql = "SELECT * FROM Admin WHERE id=?";
+        return template.queryForObject(sql, rowMapper, id);
     }
     public void createAdmin(Admin admin){
-        String sql = "INSERT INTO Admin(name, login) VALUES(?, ?)";
-        RowMapper<Admin> rowMapper = new BeanPropertyRowMapper<>(Admin.class);
+        sql = "INSERT INTO Admin(name, login) VALUES(?, ?)";
         template.update(sql, rowMapper, admin.getName(), admin.getLogin());
     }
     public void updateAdmin(Admin admin){
-        String sql = "UPDATE Admin SET name=?, login=?";
+        sql = "UPDATE Admin SET name=?, login=?";
         template.update(sql, admin.getName(), admin.getLogin());
     }
     public void deleteAdmin(int id){
-        String sql = "DELETE FROM Admin WHERE id=?";
+        sql = "DELETE FROM Admin WHERE id=?";
         template.update(sql, id);
     }
 }
