@@ -3,12 +3,10 @@ package Controller;
 import Models.Admin;
 import Models.Student;
 import Models.Teacher;
-import Repositories.TeacherRepo;
 import Services.AdminService;
 import Services.KlasseService;
 import Services.StudentService;
 import Services.TeacherService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class homeController{
-    @Autowired
     TeacherService teacherService;
     AdminService adminService;
     StudentService studentService;
@@ -51,6 +48,11 @@ public class homeController{
     public void createStudent(@ModelAttribute Student student){
         studentService.createStudent(student);
     }
+    @GetMapping("/KlassePage")
+    public String klassePage(){
+        return "KlassePage";
+    }
+
 
     @GetMapping("/UserPage")
     public String userPage(){
